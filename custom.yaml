@@ -1,0 +1,203 @@
+version: 2
+name: custom
+displayName: Custom MCP Servers
+registry:
+  bionovaq:
+    description: "Complete BionovaQ sterilization management API"
+    title: "BionovaQ CSSD Management"
+    type: server
+    dateAdded: "2025-01-17T00:00:00Z"
+    image: bionovaq-mcp-server:latest
+    ref: ""
+    readme: ""
+    toolsUrl: ""
+    source: ""
+    upstream: ""
+    icon: ""
+    env:
+      - name: BIONOVA_SESSIONS_DIR
+        value: /app/sessions
+    volumes:
+      - ./bionovaq_sessions:/app/sessions
+    tools:
+      - name: login
+      - name: logout
+      - name: list_sessions
+      - name: get_active_sessions
+      - name: check_connection
+      - name: analyze_user_query
+      - name: check_data_exists
+      - name: get_system_metrics
+      - name: get_glossary_term
+      - name: explain_create_material
+      - name: explain_delete_material
+      - name: explain_create_material_type
+      - name: explain_delete_material_type
+      - name: explain_add_material_stock
+      - name: explain_modify_material_stock
+      - name: explain_create_package
+      - name: explain_delete_package
+      - name: explain_finish_package
+      - name: explain_create_charge
+      - name: explain_delete_charge
+      - name: explain_finish_charge
+      - name: explain_release_charge
+      - name: explain_store_package
+      - name: explain_dispatch_package
+      - name: explain_receive_materials
+      - name: explain_create_washing_charge
+      - name: explain_release_washing
+      - name: explain_wash_materials
+      - name: explain_hygiene_test
+      - name: explain_register_third_party_package
+      - name: explain_delete_location
+      - name: explain_delete_brand
+      - name: explain_delete_model
+      - name: explain_delete_package_type
+      - name: get_workflow_explanation
+      - name: get_distributor_by_domain
+      - name: get_countries
+      - name: get_languages
+      - name: get_user_screen_permissions
+      - name: get_general_object
+      - name: get_user_language
+      - name: get_regional_format
+      - name: validate_eula
+      - name: get_app_menu
+      - name: get_screen_config
+      - name: get_sector
+      - name: get_sectors_by_company
+      - name: get_areas
+      - name: get_material_types
+      - name: get_methods
+      - name: get_material_list
+      - name: get_material_stock_by_status
+      - name: get_material_stock_by_material
+      - name: get_pending_returns
+      - name: get_package_list
+      - name: get_package_details
+      - name: get_stored_packages
+      - name: get_charge_list
+      - name: get_charge_details
+      - name: get_charge_parameters
+      - name: get_reading_bi_list
+      - name: get_sterilizers
+      - name: get_washers_by_user
+      - name: get_washing_charge_list
+      - name: get_washing_charge_details
+      - name: get_hygiene_list
+      - name: get_products_for_hygiene
+      - name: get_completed_protein_readings
+      - name: get_historical_protein_readings
+      - name: get_dispatch_list
+      - name: get_procedure_codes
+      - name: get_surgery_events
+      - name: calculate_date
+    metadata:
+      category: integration
+      tags:
+        - healthcare
+        - sterilization
+        - medical-devices
+        - quality-control
+        - cssd
+    license: MIT
+    owner: local
+# version: 2
+# name: custom
+# displayName: Custom MCP Servers
+# registry:
+#   bionovaq:
+#     description: "Complete BionovaQ sterilization management API"
+#     title: "BionovaQ CSSD Management"
+#     type: server
+#     dateAdded: "2025-01-17T00:00:00Z"
+#     image: bionovaq-mcp-server:latest
+#     ref: ""
+#     readme: ""
+#     toolsUrl: ""
+#     source: ""
+#     upstream: ""
+#     icon: ""
+#     env:
+#       - name: BIONOVA_SESSIONS_DIR
+#         value: /app/sessions
+#     volumes:
+#       - ./bionovaq_sessions:/app/sessions
+#     tools:
+#       - name: analyze_user_query
+#       - name: check_data_exists
+#       - name: get_system_metrics
+#       - name: get_glossary_term
+#       - name: login
+#       - name: logout
+#       - name: list_sessions
+#       - name: check_connection
+#       - name: explain_add_material_stock
+#       - name: explain_create_charge
+#       - name: explain_create_material
+#       - name: explain_create_material_type
+#       - name: explain_create_package
+#       - name: explain_create_washing_charge
+#       - name: explain_delete_brand
+#       - name: explain_delete_charge
+#       - name: explain_delete_location
+#       - name: explain_delete_material
+#       - name: explain_delete_material_type
+#       - name: explain_delete_model
+#       - name: explain_delete_package
+#       - name: explain_delete_package_type
+#       - name: explain_dispatch_package
+#       - name: explain_finish_charge
+#       - name: explain_finish_package
+#       - name: explain_hygiene_test
+#       - name: explain_modify_material_stock
+#       - name: explain_receive_materials
+#       - name: explain_register_third_party_package
+#       - name: explain_release_charge
+#       - name: explain_release_washing
+#       - name: explain_store_package
+#       - name: explain_wash_materials
+#       - name: get_distributor_by_domain
+#       - name: get_countries
+#       - name: get_languages
+#       - name: get_user_screen_permissions
+#       - name: get_general_object
+#       - name: get_user_language
+#       - name: get_regional_format
+#       - name: validate_eula
+#       - name: get_app_menu
+#       - name: get_screen_config
+#       - name: get_sector
+#       - name: get_sectors_by_company
+#       - name: get_areas
+#       - name: get_pending_returns
+#       - name: get_material_types
+#       - name: get_methods
+#       - name: get_material_list
+#       - name: get_material_stock_by_status
+#       - name: get_material_stock_by_material
+#       - name: get_package_list
+#       - name: get_stored_packages
+#       - name: get_charge_list
+#       - name: get_charge_parameters
+#       - name: get_reading_bi_list
+#       - name: get_washers_by_user
+#       - name: get_washing_charge_list
+#       - name: get_hygiene_list
+#       - name: get_products_for_hygiene
+#       - name: get_completed_protein_readings
+#       - name: get_historical_protein_readings
+#       - name: get_dispatch_list
+#       - name: get_procedure_codes
+#       - name: get_surgery_events
+#     metadata:
+#       category: integration
+#       tags:
+#         - healthcare
+#         - sterilization
+#         - medical-devices
+#         - quality-control
+#         - cssd
+#     license: MIT
+#     owner: local
